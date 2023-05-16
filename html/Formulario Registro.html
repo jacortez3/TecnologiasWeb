@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario Registro</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+	<br>
+<div class="container">
+	<form>
+		<fieldset>
+			<legend>Direccion de Envio</legend>
+			<div class="form-group">
+				<label for="CallePr">Calle Principal</label>
+				<input type="text" class="form-control" id="CallePr" placeholder="Ingrese la Calle Principal">
+			</div>
+
+			<div class="form-group">
+				<label for="Traversal">Traversal</label>
+				<input type="text" class="form-control" id="Traversal" placeholder="Ingrese la Calle Traversal">
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox">Entrega al Propietario</label>
+				<br>
+				<label><input type="checkbox" id="EntregaTercero" onchange="mostrarOcultarFormulario()">Entrega a un Tercero</label>
+			</div>
+			<br>
+			<div class="form-group">
+		      <label class="control-label col-sm-1" for="cantones">Cantones</label>
+		      <div class="col-sm-2"> 
+			      <select class="form-control" id="cantones">
+			        <option>Quito</option>
+			        <option>Cuenca</option>
+			        <option>Guayaquil</option>
+			        <option>Galapagos</option>
+			      </select>
+		  		</div>
+		    </div>
+		    <br>
+		    <br>
+		    <button type="submit" class="btn btn-default">Enviar Datos</button>
+		</fieldset>
+		<br>
+		<br>
+		</form>
+		<form id="FormTercero" style="display:none">
+		<fieldset>
+			<legend>Informacion Confidencial</legend>
+			<div class="form-group">
+		      <label class="control-label col-sm-1" for="CodigoPostal">Codigo Postal</label>
+		      <div class="col-sm-3">
+		      		<input type="text" class="form-control" id="CodigoPostal" placeholder="Ingrese el Codigo Postal">
+		      </div>
+
+		    </div>
+		    <br>
+		    <br>
+		    <br>
+			<div class="form-group">
+				<label for="CallePr">Referencia de la Direccion</label>
+				<br>
+				<textarea name="Referencia" id="Referencia" cols="30" rows="5"></textarea>
+			</div>
+		    <br>
+		    <button type="submit" class="btn btn-default">Guardar</button>
+		</fieldset>
+	</form>
+	
+</div>
+
+</body>
+<script src="../js/Funciones.js"></script>
+
+</html>
